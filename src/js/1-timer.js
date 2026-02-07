@@ -1,7 +1,8 @@
 import flatpickr from "flatpickr";
-
+import "flatpickr/dist/flatpickr.min.css";
 
 import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
 
 const inputEl = document.querySelector("#datetime-picker");
@@ -25,6 +26,7 @@ const options = {
   locale: {                
     weekdays: {
       ...flatpickr.l10ns.default.weekdays,
+      firstDayOfWeek: 1,
       shorthand: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
     },
   },
@@ -73,7 +75,7 @@ function convertMs(ms) {
 }
 
 function updateUI({ days, hours, minutes, seconds }) {
-  daysEl.textContent = String(days);
+  daysEl.textContent = addLeadingZero(days); 
   hoursEl.textContent = addLeadingZero(hours);
   minutesEl.textContent = addLeadingZero(minutes);
   secondsEl.textContent = addLeadingZero(seconds);
