@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  color: #2e2f42;
+  text-align: left;
+}
+
+.form input[name='delay'] {
+  width: 360px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+}
+
+.form input[name='delay']:focus {
+  border-color: #4e75ff;
+}
+
+.form input[name='delay']:not(:focus) {
+  border-color: #808080;
+}
+
+.form fieldset {
+  margin-top: 16px;
+  width: 360px;
+  padding: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.form legend {
+  padding: 0 8px;
+  text-align: left;
+  color: #2e2f42;
+}
+
+.form fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 48px;
+  font-size: 16px;
+  color: #2e2f42;
+}
+
+.form input[type='radio'] {
+  width: 16px;
+  height: 16px;
+}
+
+.form button[type='submit'] {
+  margin-top: 24px;
+  width: 360px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #4e75ff;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form button[type='submit']:hover {
+  background: #6c8cff;
+}
+
+.form button[type='submit']:disabled {
+  background: #cfcfcf;
+  cursor: not-allowed;
+}
